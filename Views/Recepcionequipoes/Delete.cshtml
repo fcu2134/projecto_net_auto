@@ -1,0 +1,99 @@
+﻿@model projecto_net.Models.Recepcionequipo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Recepcionequipo</h4>
+    <hr />
+    <dl class="row justify-content-center" >
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoPc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoPc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Accesorio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Accesorio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MarcaPc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MarcaPc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ModeloPc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModeloPc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nserie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nserie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CapacidadRam)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CapacidadRam)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipoalmacenamiento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipoalmacenamiento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CapacidadAlmacenamiento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CapacidadAlmacenamiento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipogpu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipogpu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Grafica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Grafica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Servicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Servicio.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-light">Back to List</a>
+    </form>
+</div>

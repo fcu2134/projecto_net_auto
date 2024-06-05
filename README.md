@@ -1,0 +1,1 @@
+esta casi hecho solo me falta de ecryptar y toy joya, usare el metodo hash pa hacerlo, el codigo se hace repetitivo asi que la curva de aprendizaje no es tan alta , todavia no se como voy a ecrpytarlo pero por ahi vamos 

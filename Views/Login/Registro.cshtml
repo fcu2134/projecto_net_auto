@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Registro";
+}
+@model projecto_net.Models.Registro
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" type="text/css" href="~/css/registro.css">
+    <script src="~/js/login.js"></script>
+</head>
+<body>
+    <div class="registro">
+        <h1>registro</h1>
+        <form asp-action="Registro" method="post" asp-controller="Login">
+            <div class="input-group">
+                <input asp-for="Nombre" id="Nombre" placeholder=" " />
+                <label for="Nombre">Nombre</label>
+            </div>
+            <div class="input-group">
+                <input asp-for="Apellido" id="Apellido" placeholder=" " />
+                <label for="Apellido">Apellido</label>
+            </div>
+            <div class="input-group">
+                <input asp-for="Correo" id="Correo" type="email" placeholder=" " />
+                <label for="Correo">Correo electrónico</label>
+            </div>
+            <div class="input-group">
+                <input asp-for="Password" id="Password" type="password" placeholder=" " />
+                <label for="Password">Contraseña</label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="nav-link text-dark boton-registrarse">Regístrate ahora!</button>
+            @if (ViewData["mensaje"] != null)
+            {
+                <div class="alert alert-danger" role="alert" style="text-align:center">
+                    @ViewData["mensaje"]
+                </div>
+            }
+        </form>
+        <p class="message">¿Ya tienes una cuenta? <a href="~/Login/Index">Iniciar sesión</a></p>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿@model projecto_net.Models.Login
+
+@{
+    ViewData["Title"] = "Inicio de Sesión";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" type="text/css" href="~/css/login.css">
+   
+  
+</head>
+
+<body>
+    <div class="login-page">
+       
+        <div class="form">
+          
+            <form asp-action="Index" method="post" asp-asp-controller="Login">
+                <img src="../imagenes/747376.png"> 
+
+                <p style="color:aliceblue">inicio Sesion</p>
+                <div>
+                    <input asp-for="Correo" placeholder="Correo electrónico" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+                <div>
+                    <input asp-for="Password" type="password" placeholder="Contraseña" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <button type="submit" class="nav-link text-dark boton-iniciar">Iniciar Sesión</button>
+                    
+                @if (ViewData["mensaje"] != null)
+                {
+                    <div class="alert alert-danger" role="alert" style="text-align:center; margin:5px; color:aliceblue" >
+                        @ViewData["mensaje"]
+                    </div>
+                }
+
+                
+                    
+                <p class="message">¿No estás registrado? <a asp-controller="login" asp-action="Registro">Crear una cuenta</a></p>
+            </form>
+
+            
+            
+        </div>
+    </div>
+
+
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@using System.Security.Claims;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="carousel-inner">
+
+    }
+    <div class="carousel-item position-relative active" style="min-height: 100vh;">
+       
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
+            <div class="p-3 text-center" style="max-width: 1000px; color: black;">
+
+                <h3 class="display-3 text-capitalize text-red mb-8">mantenimiento de equipos </h3>
+
+                @if (User.Identity!.IsAuthenticated)
+                {
+                    <h6 class="display-6" style="font-size: 27px;">
+                        gusto en verte:
+                        <strong>
+                            @User.Claims.Where(c => c.Type == ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()
+                            <p6>con correo: </p6>
+                            @User.Claims.Where(c => c.Type == ClaimTypes.Email).Select(c => c.Value).SingleOrDefault()
+                        </strong>
+                    </h6>
+
+                }
+
+               <form asp-area="" asp-controller="Home" asp-action="cierre" style="text-align: center; ">
+                    <input type="submit" class="nav-link text-dark boton-salir" value="Salir" />
+               </form>
+
+
+
+
+
+                <video width="420" height="340" controls autoplay loop>
+                    <source src="~/imagenes/auto.mp4" type="video/mp4">
+
+                </video>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

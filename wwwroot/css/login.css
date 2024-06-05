@@ -1,0 +1,89 @@
+﻿
+body {
+    background-color: whitesmoke; 
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('../imagenes/azulado.jpg');
+}
+
+
+
+.login-page {
+    width: 360px; 
+    padding: 8% 0 0; 
+    margin: auto; 
+}
+
+
+.form {
+    position: relative;
+    z-index: 1;
+    background-color: #323232;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 160px rgba(255, 4, 0);
+}
+
+    .form input {
+        font-family: "Roboto", sans-serif;
+        outline: 0;
+        background-color: black;
+        color:aliceblue;
+        width: 90%;
+        border: 20px;
+        margin: 0 0 20px;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        font-size: 14px;
+        color: red;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 53, 81);
+    }
+
+    /* Estilos para el botón se puee mejorar ,tengo una idea de hacer un deslizamiento del login y register pero ya veremos  */
+    .form button {
+        text-align: center;
+        background-color: black;
+        color:red;
+        display: block;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 10px 20px;
+        animation: animacionBoton 3s ease infinite;
+    }
+    /* Estilos para el mensaje que salga al equivocarte  */
+    .form .message {
+        margin: 15px 0 0;
+        color: #b3b3b3;
+        font-size: 12px;
+    }
+
+    .form .message a {
+        color: red;
+        text-decoration: none;
+    }
+
+
+    .login-page img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 35px;
+    }
+
+
+@keyframes animacionBoton {
+    0% {
+        transform: scale3d(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    } 

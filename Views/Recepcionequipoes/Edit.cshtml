@@ -1,0 +1,94 @@
+﻿@model projecto_net.Models.Recepcionequipo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Recepcionequipo</h4>
+<hr />
+<div class="row justify-content-center" >
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ServicioId" class="control-label"></label>
+                <select asp-for="ServicioId" class="form-control" asp-items="ViewBag.ServicioId"></select>
+                <span asp-validation-for="ServicioId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClienteId" class="control-label"></label>
+                <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                <span asp-validation-for="ClienteId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoPc" class="control-label"></label>
+                <input asp-for="TipoPc" class="form-control" />
+                <span asp-validation-for="TipoPc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accesorio" class="control-label"></label>
+                <input asp-for="Accesorio" class="form-control" />
+                <span asp-validation-for="Accesorio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MarcaPc" class="control-label"></label>
+                <input asp-for="MarcaPc" class="form-control" />
+                <span asp-validation-for="MarcaPc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModeloPc" class="control-label"></label>
+                <input asp-for="ModeloPc" class="form-control" />
+                <span asp-validation-for="ModeloPc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nserie" class="control-label"></label>
+                <input asp-for="Nserie" class="form-control" />
+                <span asp-validation-for="Nserie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CapacidadRam" class="control-label"></label>
+                <input asp-for="CapacidadRam" class="form-control" />
+                <span asp-validation-for="CapacidadRam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipoalmacenamiento" class="control-label"></label>
+                <input asp-for="Tipoalmacenamiento" class="form-control" />
+                <span asp-validation-for="Tipoalmacenamiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CapacidadAlmacenamiento" class="control-label"></label>
+                <input asp-for="CapacidadAlmacenamiento" class="form-control" />
+                <span asp-validation-for="CapacidadAlmacenamiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipogpu" class="control-label"></label>
+                <input asp-for="Tipogpu" class="form-control" />
+                <span asp-validation-for="Tipogpu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grafica" class="control-label"></label>
+                <input asp-for="Grafica" class="form-control" />
+                <span asp-validation-for="Grafica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-dark">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
